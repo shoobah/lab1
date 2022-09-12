@@ -2,7 +2,7 @@
 	import Bar from '$lib/Bar.svelte';
 
 	let val = 1;
-	let values = Array(1000).fill(10);
+	let values = Array(100).fill(10);
 
 	/**
 	 * @param {number} min
@@ -13,6 +13,10 @@
 		return val;
 	}
 
+    function randomColor() {
+        return `#${Math.floor(Math.random()*16777215).toString(16)}`;
+    }
+
 	function randomBars() {
 		values = values.map(() => random(1, 1000));
 	}
@@ -22,7 +26,7 @@
 <br />
 
 {#each values as value}
-	<Bar {value} width={1000} height={1} color="#ffaa00"/>
+	<Bar {value} width={1000} height={10} color={randomColor()}/>
 {/each}
 <div />
 

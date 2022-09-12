@@ -30,11 +30,12 @@
 </script>
 
 <button on:click={randomBars}>Randomize</button>
-<input type="range" bind:value={numberOfBars} min="5" max="500" on:change={randomBars} />
+<input type="range" bind:value={numberOfBars} min="5" max="2000" on:change={randomBars} />
+<span>{numberOfBars}</span>
 <br />
 
 {#each values as value}
-	<Bar {value} width={1000} height={1000 / numberOfBars} color={randomColor()} />
+	<Bar {value} width={1000} height={1000 / numberOfBars} color={randomColor()} showText={numberOfBars<50} />
 {/each}
 <div />
 

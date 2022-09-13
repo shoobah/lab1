@@ -15,7 +15,7 @@
 
     export let border=false;
 
-	const val = spring(1, { stiffness: 0.3, damping: 0.4 });
+	const val = spring(1, { stiffness: 0.5, damping: 1 });
 
 	$: $val = value;
 	$: v = $val < 0 ? $val * -1 : $val;

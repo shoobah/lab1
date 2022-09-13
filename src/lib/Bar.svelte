@@ -37,7 +37,7 @@
         {/if}
         {#if showText}
 		<text class="small" x="5" y="17">
-			{value}
+			{Math.round(v)}
 		</text>
         {/if}
 	</g>

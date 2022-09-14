@@ -12,21 +12,23 @@
 		return color;
 	}
 
-
 	let x = spring(50, springConfig);
 	let y = spring(50, springConfig);
-	let r = spring(10, { stiffness: 0.7, damping: 0.2 });
-  let color = generateLightColorHex();
+	let r = spring(10, { stiffness: 0.5, damping: 0.2 });
+	let color = generateLightColorHex();
 
+	/**
+	 * @param {{ offsetX: number; offsetY: number; }} e
+	 */
 	function move(e) {
 		$x = e.offsetX;
 		$y = e.offsetY;
 	}
 
-  function changeSize() {
-    $r = Math.random() * 100;
-    color = generateLightColorHex();
-  }
+	function changeSize() {
+		$r = Math.random() * 100;
+		color = generateLightColorHex();
+	}
 </script>
 
 <svg on:click={changeSize} on:mousemove={move}>
@@ -40,8 +42,8 @@
 		width: 600px;
 		height: 600px;
 		background-color: rgb(43, 43, 43);
-    cursor:none;
-    border: solid 2px #6553b2;
-    margin: 0 auto;
+		cursor: none;
+		border: solid 2px #6553b2;
+		margin: 0 auto;
 	}
 </style>

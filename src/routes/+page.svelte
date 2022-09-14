@@ -16,7 +16,7 @@
 			</picture>
 		</span>
 
-		to your new<br />SvelteKit app
+		to Shoobahs experimantal<br />SvelteKit app
 	</h1>
 
 	<h2>

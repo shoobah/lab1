@@ -16,14 +16,12 @@
     export let border=false;
 
 	const val = spring(1, { stiffness: 0.5, damping: 1 });
-
-	$: $val = value;
-	$: v = $val < 0 ? $val * -1 : $val;
+	$: $val = Math.abs(value);
 </script>
 
 <svg viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg" style={`--width:${width}px`}>
 	<g>
-		<rect x="0" y="0" width={v} height={height} fill={color} />
+		<rect x="0" y="0" width={$val} height={height} fill={color} />
         {#if border}
 		<rect
 			x="0"
@@ -37,7 +35,7 @@
         {/if}
         {#if showText}
 		<text class="small" x="5" y="17">
-			{Math.round(v)}
+			{Math.round($val)}
 		</text>
         {/if}
 	</g>

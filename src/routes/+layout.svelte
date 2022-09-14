@@ -31,6 +31,7 @@
 		justify-content: center;
 		align-items: center;
 		padding: 40px;
+        user-select: none;
 	}
 
 	footer a {

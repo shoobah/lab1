@@ -31,6 +31,8 @@
 	}
 </script>
 
+<h1 class="text-3xl font-bold underline">Hello world!</h1>
+
 <svg on:click={changeSize} on:mousemove={move}>
 	<g>
 		<circle cx={$x} cy={$y} r={$r} fill={color} />

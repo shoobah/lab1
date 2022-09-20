@@ -31,13 +31,14 @@
 	}
 </script>
 
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
-
-<svg on:click={changeSize} on:mousemove={move}>
-	<g>
-		<circle cx={$x} cy={$y} r={$r} fill={color} />
-	</g>
-</svg>
+<h1 class="text-2xl">Hello world!</h1>
+<div class="bg-red-100 p-4 rounded-lg">
+	<svg on:click={changeSize} on:mousemove={move}>
+		<g>
+			<circle cx={$x} cy={$y} r={Math.abs($r)} fill={color} />
+		</g>
+	</svg>
+</div>
 
 <style>
 	svg {
